@@ -206,6 +206,7 @@ void QDeclarativeVideoOutput::setSource(QObject *source)
             }
 
             m_sourceType = MediaObjectSource;
+#if QT_CONFIG(opengl)
         } else if (metaObject->indexOfProperty("videoSurface") != -1) {
             // Make sure our backend is a QDeclarativeVideoRendererBackend
             m_backend.reset();
@@ -222,6 +223,7 @@ void QDeclarativeVideoOutput::setSource(QObject *source)
         } else {
             m_sourceType = NoSource;
         }
+#endif
     } else {
         m_sourceType = NoSource;
     }
@@ -247,12 +249,13 @@ bool QDeclarativeVideoOutput::createBackend(QMediaService *service)
             }
         }
     }
-
+#if QT_CONFIG(opengl)
     if (!backendAvailable) {
         m_backend.reset(new QDeclarativeVideoRendererBackend(this));
         if (m_backend->init(service))
             backendAvailable = true;
     }
+#endif
 
     // QDeclarativeVideoWindowBackend only works when there is a service with a QVideoWindowControl.
     // Without service, the QDeclarativeVideoRendererBackend should always work.

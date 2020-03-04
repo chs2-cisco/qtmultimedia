@@ -37,6 +37,12 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
+
+/*
+ * apply fix from qt support
+ * Sep 4, 2019, Erik Veijola (Cisco Systems, Inc.)
+ */
+
 #include "qdeclarativevideooutput_p.h"
 
 #include "qdeclarativevideooutput_render_p.h"

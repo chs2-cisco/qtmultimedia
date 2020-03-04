@@ -37,6 +37,11 @@
 **
 ****************************************************************************/
 
+/*
+ * Don't initialize volume on pulse audio input by default.
+ * Nov 13, 2015, Morten Minde Neergaard (Cisco Systems, Inc.)
+ */
+
 //
 //  W A R N I N G
 //  -------------

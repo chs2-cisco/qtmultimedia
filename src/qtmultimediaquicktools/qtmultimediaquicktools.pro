@@ -1,3 +1,6 @@
+# apply fix from qt support
+# Sep 4, 2019, Erik Veijola (Cisco Systems, Inc.)
+
 TARGET = QtMultimediaQuick
 
 QT = core quick multimedia-private

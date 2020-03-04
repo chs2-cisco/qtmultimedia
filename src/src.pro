@@ -1,3 +1,9 @@
+# apply fix from qt support
+# Sep 4, 2019, Erik Veijola (Cisco Systems, Inc.)
+
+# Declare videonode dependency on Qt5MultimediaQuick_p
+# Sep 21, 2015, Levy, Lawrence-Jacques (Cisco Systems, Inc.)
+
 TEMPLATE = subdirs
 
 SUBDIRS += multimedia

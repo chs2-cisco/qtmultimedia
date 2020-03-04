@@ -37,6 +37,11 @@
 **
 ****************************************************************************/
 
+/*
+ * Don't initialize volume on pulse audio input by default.
+ * Nov 13, 2015, Morten Minde Neergaard (Cisco Systems, Inc.)
+ */
+
 #include <QtCore/qcoreapplication.h>
 #include <QtCore/qdebug.h>
 #include <QtCore/qmath.h>
